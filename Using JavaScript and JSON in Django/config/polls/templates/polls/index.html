@@ -1,0 +1,11 @@
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        return HttpResponse("Hello, world. thunder 2b3c3b06 is the polls index.")
+        <!--resp.set_cookie('dj4e_cookie', 'b14ab177', max_age=1000)-->
+        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
